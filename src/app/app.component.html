@@ -1,25 +1,49 @@
-<table style="width:100%">
+<!-- <table style="width:100%">
+
   <tr>
     <th rowspan="3">
       <div class="card1">
-          <img alt="element 06" class="mb-1" src="assets/13.png" width="140px">
+          <img [src]="url[0]" width="140px">
       </div>
     </th>
-
-    <td><div class="card">Image2</div></td>  
-    <td><div class="card">Image3</div></td>
+    <td><img [src]="url[1]" width="170px"></td>  
+    <td><div class="card"><img [src]="url[2]" width="170px"></div></td>
   </tr>
   <tr>
     <td>{{secondTitle}}</td>
     <td>{{thirdTitle}}</td>
   </tr>
   <tr>
-    <td><div class="card">Image4</div></td>
-    <td><div class="card">Image5</div></td>
+    <td><div class="card"><img [src]="url[3]" width="170px"></div></td>
+    <td><div class="card"><img [src]="url[4]" width="170px"></div></td>
   </tr>
   <tr>
     <td>{{firstTitle}}</td>
     <td>{{fourthTitle}}</td>
     <td>{{fifthTitle}}</td>
   </tr>
-</table>
+</table> -->
+
+
+<table class="tableCenter">
+    <tr>
+      <th rowspan="3">
+            <img [src]="url[0]" width="450px">
+      </th>
+      <td><img [src]="url[1]" width="170px"></td>  
+      <td><img [src]="url[2]" width="170px"></td>
+    </tr>
+    <tr>
+      <td>{{secondTitle}}</td>
+      <td>{{thirdTitle}}</td>
+    </tr>
+    <tr>
+      <td><img [src]="url[3]" width="170px"></td>
+      <td><img [src]="url[4]" width="170px"></td>
+    </tr>
+    <tr>
+      <td>{{firstTitle}}</td>
+      <td>{{fourthTitle}}</td>
+      <td>{{fifthTitle}}</td>
+    </tr>
+  </table>

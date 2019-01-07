@@ -7,13 +7,14 @@ import { ApiService } from './api-service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  firstImageData: any = [];
   fifthTitle: any;
   fourthTitle: any;
   thirdTitle: any;
   secondTitle: any;
   firstTitle: any;
   titles: any;
-  url: string;
+  url: any = [];
   title = 'app';
 
   constructor(public apiservice: ApiService) {
@@ -40,8 +41,11 @@ export class AppComponent {
     debugger
     this.apiservice.getImageData().then((result) => {
       debugger;
-      this.url = result[0].post_url;
-
+      for(var i=0; i<5; i++){
+        this.firstImageData[i] = result[i];
+        this.url[i] = 'https://picsum.photos/'+this.firstImageData[i].width+'/'+this.firstImageData[i].height+'?image='+this.firstImageData[i].id;
+      }
+     
     }, (err) => {
     });
   }
